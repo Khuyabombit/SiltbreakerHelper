@@ -1,6 +1,7 @@
 local SiltbreakerHelp = {}
 
 SiltbreakerHelp.font = Renderer.LoadFont("Tahoma", 20, Enum.FontWeight.BOLD)
+
 local lycan_claw = 0
 local lycan_claw_pos = 0
 local lycan_claw_rot = 0
@@ -10,6 +11,18 @@ local axe_posit = {}
 local axe_rotate ={}
 local animation_stat = {}
 local size_x, size_y = Renderer.GetScreenSize()
+
+function SiltbreakerHelp.OnGameStart()
+	lycan_claw = 0
+	lycan_claw_pos = 0
+	lycan_claw_rot = 0
+	omni_heal = 0
+	axe_time = {}
+	axe_posit = {}
+	axe_rotate ={}
+	animation_stat = {}
+	size_x, size_y = Renderer.GetScreenSize()
+end
 
 function DrawCircle(UnitPos, radius)
 	local x1, y1 = Renderer.WorldToScreen(UnitPos)
